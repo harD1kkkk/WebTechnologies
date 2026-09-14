@@ -1,0 +1,18 @@
+{{include "header.html"}}
+
+<h1>{{title}}</h1>
+
+<p>Студент: {{student.name}}</p>
+<p>Група: {{student.group}}</p>
+
+{{if isLoggedIn}}
+<p>Користувач увійшов в систему</p>
+{{endif}}
+
+<h2>Список товарів:</h2>
+
+<ul>
+{{foreach products}}
+    <li>{{item.name}} - {{item.price}} грн</li>
+{{endforeach}}
+</ul>
